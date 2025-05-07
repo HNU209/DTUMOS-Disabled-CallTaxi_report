@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/css/dash.css" rel="stylesheet" type="text/css"/>
-    <script src="./assets/js/tab.js"></script>
-    <script src="./assets/js/stats-loader.js"></script>
+    <script defer src="./assets/js/tab.js"></script>
+    <script defer src="./assets/js/stats-loader.js"></script>
     <script src="plotly-2.14.0.min.js"></script>
     <title>Results Report</title>
 </head>
@@ -14,6 +14,19 @@
     <div id="banner">
         <h1 id="header-text">RESULTS REPORT</h1>
     </div>
+    <div id="scenario-container" style="margin: 16px;">
+        <label for="scenario-select"><b>Scenario:</b></label>
+        <select id="scenario-select">
+          <option value="Baseline">Baseline</option>
+          <option value="Scenario_A-1">Scenario_A-1</option>
+          <option value="Scenario_A-2">Scenario_A-2</option>
+          <option value="Scenario_B">Scenario_B</option>
+          <option value="Scenario_C">Scenario_C</option>
+          <option value="Scenario_D">Scenario_D</option>
+          <option value="Scenario_E">Scenario_E</option>
+        </select>
+    </div>
+    
     <hr/>
     <div id="tab">
         <button class="tablinks" onclick="openCity(event, 'service')">
@@ -38,12 +51,12 @@
         <div class="row2">
             <div class="col1 dash-graph">
                 <div class="js-plotly-plot">
-                    <iframe src="./assets/figure/figure_1.html" frameborder="0"></iframe>
+                    <iframe  data-src-template="./assets/figure/{scenario}/figure_1.html" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="col2 dash-graph">
                 <div class="js-plotly-plot">
-                    <iframe src="./assets/figure/figure_2.html" frameborder="0"></iframe>
+                    <iframe  data-src-template="./assets/figure/{scenario}/figure_2.html" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -51,7 +64,7 @@
         <h4><b>2. Distribution of Passenger Waiting Times</b></h4>
         <div class="dash-graph">
             <div class="js-plotly-plot">
-                <iframe src="./assets/figure/figure_3.html" frameborder="0"></iframe>
+                <iframe  data-src-template="./assets/figure/{scenario}/figure_3.html" frameborder="0"></iframe>
             </div>
         </div>
     </div>
@@ -69,14 +82,14 @@
         <div id="operating-col" class="dash-graph">
             <div class="js-plotly-plot">
                 <!-- <iframe data-src="./assets/figure/figure_4.html" frameborder="0"></iframe> -->
-                <iframe src="./assets/figure/figure_4.html" frameborder="0"></iframe>
+                <iframe  data-src-template="./assets/figure/{scenario}/figure_4.html" frameborder="0"></iframe>
             </div>
         </div>
         <h4><b>2. Number of Vehicles Operated per Hour</b></h4>
         <div id="operating-col" class="dash-graph">
             <div class="js-plotly-plot">
                 <!-- <iframe data-src="./assets/figure/figure_5.html" frameborder="0"></iframe> -->
-                <iframe src="./assets/figure/figure_5.html" frameborder="0"></iframe>
+                <iframe  data-src-template="./assets/figure/{scenario}/figure_5.html" frameborder="0"></iframe>
             </div>
         </div>
     </div>
@@ -89,12 +102,12 @@
             <div id="requests-col1">
                 <div class="dash-geometry-graph">
                     <div class="js-plotly-plot">
-                        <iframe src="./assets/figure/figure_6.html" frameborder="0"></iframe>
+                        <iframe  data-src-template="./assets/figure/{scenario}/figure_6.html" frameborder="0"></iframe>
                     </div>
                 </div>
                 <div class="dash-geometry-graph">
                     <div class="js-plotly-plot">
-                        <iframe src="./assets/figure/figure_7.html" frameborder="0"></iframe>
+                        <iframe  data-src-template="./assets/figure/{scenario}/figure_7.html" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
@@ -103,12 +116,12 @@
             <div id="requests-col2">
                 <div class="dash-geometry-graph">
                     <div class="js-plotly-plot">
-                        <iframe src="./assets/figure/figure_8.html" frameborder="0"></iframe>
+                        <iframe  data-src-template="./assets/figure/{scenario}/figure_8.html" frameborder="0"></iframe>
                     </div>
                 </div>
                 <div class="dash-geometry-graph">
                     <div class="js-plotly-plot">
-                        <iframe src="./assets/figure/figure_9.html" frameborder="0"></iframe>
+                        <iframe  data-src-template="./assets/figure/{scenario}/figure_9.html" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
@@ -130,13 +143,13 @@
                 <div id="num2-row2-col1">
                     <div class="dash-geometry-graph">
                         <div class="js-plotly-plot">
-                            <iframe src="./assets/figure/figure_10.html" frameborder="0"></iframe>
+                            <iframe  data-src-template="./assets/figure/{scenario}/figure_10.html" frameborder="0"></iframe>
                         </div>
                     </div>
                 <div id="num2-row2-col2">
                     <div class="dash-geometry-graph">
                         <div class="js-plotly-plot">
-                            <iframe src="./assets/figure/figure_11.html" frameborder="0"></iframe>
+                            <iframe  data-src-template="./assets/figure/{scenario}/figure_11.html" frameborder="0"></iframe>
                         </div>
                     </div>
             </div>

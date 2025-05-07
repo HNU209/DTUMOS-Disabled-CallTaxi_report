@@ -50,6 +50,14 @@ h5 {
 }
 
 
+/* assets/css/dash.css 에 추가 */
+#scenario-select {
+    /* 헤더 크기의 절반으로 설정 */
+    font-size: 1rem;
+    /* 필요하다면 여백도 조절 가능 */
+    padding: 0.25em 0.5em;
+  }
+  
 /* tab1 - service */
 #service {
     display: flex;
