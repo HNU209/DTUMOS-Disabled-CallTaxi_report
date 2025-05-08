@@ -43,22 +43,22 @@
     <div id="service" class="tabcontent">
         <h4 class="service-sub-title"><b>1. Call Requests and Failures</b></h4>
         <div class="fade-alert-show">
-            <li><b>Total number of calls: <span id="total-calls">–</span></b></li>
-            <li><b>Total number of failed calls: <span id="total-failed-calls">–</span></b></li>
-            <li><b>Call failure rate: <span id="failure-rate">–</span>%</b></li>
-            <li><b>Number of call requests and call failures by time zone</b></li>
+            <li><b>Total calls: <span id="total-calls">–</span></b></li>
+            <li><b>Request failures: <span id="request-failures">–</span> (<span id="request-failure-rate">–</span>%)</b></li>
+            <li><b>Service failures: <span id="service-failures">–</span> (<span id="service-failure-rate">–</span>%)</b></li>
         </div>
         <div class="row2">
-            <div class="col1 dash-graph">
-                <div class="js-plotly-plot">
-                    <iframe  data-src-template="./assets/figure/{scenario}/figure_1.html" frameborder="0"></iframe>
-                </div>
-            </div>
-            <div class="col2 dash-graph">
+            <div class="dash-graph">
                 <div class="js-plotly-plot">
                     <iframe  data-src-template="./assets/figure/{scenario}/figure_2.html" frameborder="0"></iframe>
                 </div>
             </div>
+        </div>
+        <div class="figure-description">
+            <ul>
+              <li><strong>Request failures:</strong> no vehicle is dispatched within 30 minutes of the request.</li>
+              <li><strong>Service failures:</strong> a vehicle is dispatched, but the passenger waits 30 minutes or longer from the time of request to boarding.</li>
+            </ul>
         </div>
         <hr/>
         <h4><b>2. Distribution of Passenger Waiting Times</b></h4>

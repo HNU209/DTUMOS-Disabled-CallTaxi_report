@@ -1,2 +1,2 @@
-total_calls,failed_calls,failure_rate,vehicles_driven
-6000,1456,24.26,593
+total_calls,service_failures,service_failure_rate,request_failures,request_failure_rate,vehicles_driven
+6000,1533,33.8,1456,24.26,593

@@ -58,6 +58,17 @@ h5 {
     padding: 0.25em 0.5em;
   }
   
+
+.figure-description ul {
+  list-style: none;    /* 기본 불릿 제거 */
+  padding-left: 0;     /* 들여쓰기 제거 */
+}
+
+.figure-description ul li::before {
+  content: "* ";        /* 각 항목 앞에 별표 추가 */
+  margin-right: 0.5em;  /* 별표와 글자 사이 약간 공간 */
+}
+
 /* tab1 - service */
 #service {
     display: flex;

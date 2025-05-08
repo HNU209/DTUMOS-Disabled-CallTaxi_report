@@ -19,8 +19,10 @@ async function loadAndApplyStats(scenario = 'Baseline') {
 
     // 스팬 업데이트
     document.getElementById('total-calls').textContent        = stats['total_calls'] || '-';
-    document.getElementById('total-failed-calls').textContent = stats['failed_calls'] || '-';
-    document.getElementById('failure-rate').textContent       = stats['failure_rate'] || '-';
+    document.getElementById('service-failures').textContent = stats['service_failures'] || '-';
+    document.getElementById('service-failure-rate').textContent       = stats['service_failure_rate'] || '-';
+    document.getElementById('request-failures').textContent = stats['request_failures'] || '-';
+    document.getElementById('request-failure-rate').textContent       = stats['request_failure_rate'] || '-';
     document.getElementById('vehicles-driven').textContent    = stats['vehicles_driven'] || '-';
 
     // 테이블 갱신 (추가적 정보 표시)
